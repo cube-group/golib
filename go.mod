@@ -12,7 +12,7 @@ require (
 	github.com/go-sql-driver/mysql v1.5.0
 	github.com/gogo/protobuf v1.2.1
 	github.com/golang/protobuf v1.4.2
-	github.com/imroc/req v0.2.4
+	github.com/imroc/req v0.3.2
 	github.com/itchio/lzma v0.0.0-20190703113020-d3e24e3e3d49 // indirect
 	github.com/json-iterator/go v1.1.10
 	github.com/leodido/go-urn v1.1.0 // indirect
