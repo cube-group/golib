@@ -1,0 +1,7 @@
+nsq:
+  topic: "demo"
+  channel: "demo"
+  d:
+    - 127.0.0.1:4150
+  lookupd:
+    - 127.0.0.1:4161

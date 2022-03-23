@@ -1,0 +1,17 @@
+{{ define "demo/index.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{.uri}}</title>
+    <script src="/public/assets/js/common.js"></script>
+{{template "public/top.html" .}}
+</head>
+<body>
+<div>
+    <p>{{.uri}}</p>
+    <p>global func {{"123" | demo}}</p>
+</div>
+</body>
+</html>
+{{end}}

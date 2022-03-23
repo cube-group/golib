@@ -1,0 +1,14 @@
+*.exe
+*.dll
+*.so
+*.dylib
+*.cache
+/src/vendor
+vendor
+.idea
+.DS_Store
+pkg
+devops/golib
+go.sum
+bin
+main.exe

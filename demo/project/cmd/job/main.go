@@ -1,0 +1,4 @@
+package job
+
+func Init() {
+}

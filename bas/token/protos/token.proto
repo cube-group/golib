@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package protos;
+
+// 要获取的数据结构
+message TokenRequest {
+    int64 dt = 1;
+    string x_forwarded_api_gid = 2; //生成token的开发者gid
+    string x_forwarded_api_time = 3; //生成token的时间戳
+    string x_forwarded_api_ak = 4; //生成token所对应的开发者ak
+    string x_forwarded_api_md5 = 5; //合法性校验
+}
+
+// 请求数据结构
+message TokenResponse {
+    string value = 1;
+    string error = 2;
+}
+
+// 定义服务，关键字'service'，方法关键字'rpc'
+service TokenService {
+    // 单一请求应答，一对一
+    rpc GetToken (TokenRequest) returns (TokenResponse);
+}

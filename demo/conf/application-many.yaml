@@ -1,0 +1,36 @@
+server:
+  name: "demo"
+sentry:
+  dsn: ""
+mysql:
+  default:
+    address: "username:password@tcp(host:port)/db?charset=utf8&parseTime=True&loc=Local"
+    maxIdle: 3 #最大空闲连接数
+    maxOpen: 20 #最大连接数
+    logMode: true #是否打印sql日志
+  other:
+    address: "username:password@tcp(host:port)/db?charset=utf8&parseTime=True&loc=Local"
+    maxIdle: 3 #最大空闲连接数
+    maxOpen: 20 #最大连接数
+    logMode: true #是否打印sql日志
+redis:
+  default:
+    address: "127.0.0.1:6379"
+    password: ""
+    db: 0
+    poolsize: 5 #连接池最大数量
+session:
+  address: "127.0.0.1:6379"
+  password: ""
+  db: 0
+  poolsize: 5 #连接池最大数量
+  sid: "demo" #session唯一标识
+  maxAge: 86400  #session过期时效（单位：秒）
+  secret: "123123" #用于session加密key
+es:
+  default:
+    address: "127.0.0.1:9200"
+    username: "elastic"
+    password: "elastic"
+    sniff: false #SetSniff enables or disables the sniffer (enabled by default).
+    gzip: true #SetGzip enables or disables gzip compression (disabled by default).
