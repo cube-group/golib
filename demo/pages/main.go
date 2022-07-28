@@ -19,7 +19,7 @@ func (t *Status) TableName() string {
 
 func init() {
 	conf.Init(conf.Template{
-		AppYamlPath: "https://eoffcn-software.oss-cn-beijing.aliyuncs.com/application.yaml",
+		AppYamlPath: "https://xx.com/application.yaml",
 	})
 }
 

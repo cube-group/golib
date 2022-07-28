@@ -15,7 +15,7 @@ const (
 	LevelWarn         = "WARN"
 	LevelError        = "ERROR"                     //会触发报警
 	LevelFatal        = "FATAL"                     //会触发报警
-	LFlowIDKey        = "x-eoffcn-flow-id"          //上下文流程id暂存key
+	LFlowIDKey        = "x-flow-id"          //上下文流程id暂存key
 	LTcpLogApiAddress = "http://log.inner/business" //集群内网投递地址
 )
 

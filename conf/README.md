@@ -3,7 +3,7 @@ conf.Init会自动解析application.yaml中的redis和mysql配置
 ```go
 //直接读取远程yaml配置文件
 conf.Init(conf.Template{
-	AppYamlPath: "https://eoffcn-software.oss-cn-beijing.aliyuncs.com/application.yaml",
+	AppYamlPath: "https://xx.com/application.yaml",
 })
 
 //读取本地yaml配置文件
