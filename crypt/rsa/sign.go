@@ -7,9 +7,9 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/base64"
-	"fmt"
 	"github.com/cube-group/golib/types/convert"
 	"github.com/gin-gonic/gin"
+	jsoniter "github.com/json-iterator/go"
 	"net/url"
 	"sort"
 )
@@ -65,17 +65,21 @@ func GetMapSortString(m gin.H) (res string) {
 	return
 }
 
-func GetMapReverseString(m gin.H) (res string) {
-	var keys []string
-	for k, _ := range m {
-		keys = append(keys, k)
-	}
+func GetRsaSignWithMd5ReverseValueString(input string) (res, sign string, err error) {
+	var inputBytes = []byte(input)
+	var any = jsoniter.Get(inputBytes)
+	var keys = any.Keys()
+	//sort
 	sort.Slice(keys, func(i, j int) bool {
 		return keys[i] > keys[j]
 	})
 	//根据key从m中拿元素，就是按顺序拿了
 	for _, k := range keys {
-		res += fmt.Sprintf("%v", m[k])
+		if k == "sign" {
+			sign = any.Get(k).ToString()
+		} else {
+			res += any.Get(k).ToString()
+		}
 	}
 	return
 }
